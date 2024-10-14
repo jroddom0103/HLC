@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Aplicación
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-input type="number" [(ngModel)]="n1" placeholder="Introduce el primer índice de refracción."></ion-input>
+    <ion-input type="number" [(ngModel)]="n2" placeholder="Introduce el segundo índice de refracción."></ion-input>
+    <ion-input type="number" [(ngModel)]="ang1" placeholder="Introduce el la inclinación del primer rayo de luz."></ion-input>
+    
+    </script><ion-button expand="block" (click)="mostrarInformacion(ang2,vLuz1,vLuz2,angCrit)">Calcular</ion-button>
+    <p>{{mensaje}}</p>
+  </div>
+</ion-content>
