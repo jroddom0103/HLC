@@ -47,7 +47,7 @@ export class HomePage {
   }
 
   mostrarInformacion(ang2: number, vLuz1: number, vLuz2: number, angCrit: number){
-    return "Ángulo de refracción: "+ang2+"<BR>"+"Velocidad de la luz en el primer medio: "+vLuz1+"<BR>"+"Velocidad de la luz en el segundo medio: "+vLuz2+"<BR>"+" Ángulo Crítico: "+angCrit+"."
+    return "Ángulo de refracción: "+ang2+" | Velocidad de la luz en el primer medio: "+vLuz1+" | Velocidad de la luz en el segundo medio: "+vLuz2+" | Ángulo Crítico: "+angCrit+"."
    
   }
 

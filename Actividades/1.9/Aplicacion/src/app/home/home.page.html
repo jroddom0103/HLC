@@ -18,7 +18,7 @@
     <ion-input type="number" [(ngModel)]="ang1"></ion-input>
     <ion-button expand="block" (click)="activarMensaje()">Calcular</ion-button>
     <ion-card *ngIf="mensajeActivo">
-      <div [innerHTML]=mensaje></div>
+      {{ mensaje }}
     </ion-card>
   </div>
 </ion-content>
