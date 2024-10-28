@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora de Refracción de Luz
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-text color="primary">Introduce el primer índice de refracción:</ion-text>
+    <ion-input type="number" [(ngModel)]="n1"></ion-input>
+    <ion-text color="primary">Introduce el segundo índice de refracción:</ion-text>
+    <ion-input type="number" [(ngModel)]="n2"></ion-input>
+    <ion-text color="primary">Introduce el ángulo del rayo de luz en el primer medio:</ion-text>
+    <ion-input type="number" [(ngModel)]="ang1"></ion-input>
+    <ion-button expand="block" (click)="activarMensaje()">Calcular</ion-button>
+    <ion-card *ngIf="mensajeActivo">
+      {{ mensaje }}
+    </ion-card>
+  </div>
+</ion-content>
