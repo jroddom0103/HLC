@@ -1,3 +1,9 @@
+body{
+  font-family: Arial;
+}
+
+
+
 #container {
   text-align: center;
 
@@ -24,4 +30,136 @@
 
 #container a {
   text-decoration: none;
+}
+
+/*
+360×640 (móvil pequeño): 22,64%.
+375×667 (móvil medio): 5%.
+720×1280 (móvil grande): 2,74%.
+1366×768 (ordenador portátil medio): 11,98%.
+1440×900 (escritorio medio): 3,17%.
+1920×1080 (escritorio grande): 7,35%.
+*/
+
+/* Dispositivos pequeños móviles */
+@media screen and (max-width: 360px) and (max-height: 640px) and (orientation: portrait) {
+
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .content {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 640px) and (max-height: 360px) and (orientation: landscape) {
+
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .content {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+/* Dispositivos medianos móviles */
+@media screen and (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
+
+  body {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .content {
+    width: 92%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 667px) and (max-height: 375px) and (orientation: landscape) {
+
+  body {
+    font-size: 19px;
+    line-height: 1.65;
+  }
+
+  .content {
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+
+/* Dispositivos grandes móviles */
+@media screen and (max-width: 375px) and (max-height: 667px) and (orientation: portrait) {
+  
+  body {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  
+  .content {
+    width: 94%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 667px) and (max-height: 375px) and (orientation: landscape) {
+  
+  body {
+    font-size: 21px;
+    line-height: 1.75;
+  }
+  
+  .content {
+    width: 98%;
+    margin: 0 auto;
+  }
+}
+
+/* Portátiles medianos */
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  
+  body {
+    font-size: 24px;
+    line-height: 1.8;
+  }
+  
+  .content {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Escritorios medianos */
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  
+  body {
+    font-size: 26px;
+    line-height: 1.85;
+  }
+  
+  .content {
+    width: 82%;
+    margin: 0 auto;
+  }
+}
+
+/* Escritorios grandes */
+@media screen and (max-width: 1920px) and (max-height: 1080px) {
+  
+  body {
+    font-size: 28px;
+    line-height: 1.9;
+  }
+  
+  .content {
+    width: 84%;
+    margin: 0 auto;
+  }
 }
