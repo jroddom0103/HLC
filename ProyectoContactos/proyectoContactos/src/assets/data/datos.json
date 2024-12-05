@@ -1,0 +1,41 @@
+{
+    "pelicula": [
+      {
+        "id": "P001",
+        "titulo": "El Padrino: Parte II",
+        "director": "Francis Ford Coppola",
+        "precioEntrada": 12.50,
+        "duracionMinutos": 202,
+        "fechaEstreno": "December 4, 1974",
+        "actores": [
+          {
+            "nombre": "Al Pacino",
+            "personaje": "Michael Corleone"
+          },
+          {
+            "nombre": "Robert Dey:0",
+            "personaje": "Tom Hagen"
+          }
+        ]
+      },
+      {
+        "id": "P002",
+        "titulo": "El Padrino: Parte I",
+        "director": "Francis Ford Coppola",
+        "precioEntrada": 11.75,
+        "duracionMinutos": 177,
+        "fechaEstreno": "March 25, 1972",
+        "actores": [
+          {
+            "nombre": "Marlon Brando",
+            "personaje": "Don Vito Corleone"
+          },
+          {
+            "nombre": "Al Pacino",
+            "personaje": "Michael Corleone"
+          }
+        ]
+      }
+      
+    ]
+  }
