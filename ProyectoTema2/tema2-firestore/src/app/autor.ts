@@ -1,6 +1,5 @@
 export interface Autor {
-    nombre: string;
-    apellidos: string;
+    nombreCompleto: string;
     lugarNacimiento: string;
     fechaNacimiento: Date;
     fechaDefuncion: Date | null;

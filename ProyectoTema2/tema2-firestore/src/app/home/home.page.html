@@ -1,20 +1,36 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Autores Españoles
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-item>
+    <ion-label>Nombre Completo</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.nombreCompleto"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Lugar de Nacimiento</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.lugarNacimiento"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Fecha de Nacimiento</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.fechaNacimiento"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Fecha de Defunción</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.fechaDefunción"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Obras Notables</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.obrasNotables"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Fotografía</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.fotografía"></ion-input>
+  </ion-item>
+  <ion-button (click)="clicBotonInsertar()">Añadir autor</ion-button>
   </div>
 </ion-content>
