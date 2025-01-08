@@ -11,7 +11,7 @@ export class FirestoreService {
 
   }
 
-  public insertar(coleccion, datos) {
+  public insertar(coleccion:any, datos:any) {
     return this.angularFirestore.collection(coleccion).add(datos);
   }
 

@@ -4,6 +4,6 @@ export interface Autor {
     fechaNacimiento: Date;
     fechaDefuncion: Date | null;
     obrasNotables: string[];
-    fotografía: string;
+    fotografia: string;
     
 }

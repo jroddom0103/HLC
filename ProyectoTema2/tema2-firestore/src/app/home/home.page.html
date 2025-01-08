@@ -9,28 +9,27 @@
 <ion-content [fullscreen]="true">
   <ion-item>
     <ion-label>Nombre Completo</ion-label>
-    <ion-input [(ngModel)]="tareaEditando.nombreCompleto"></ion-input>
+    <ion-input [(ngModel)]="autorEditando.nombreCompleto"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>Lugar de Nacimiento</ion-label>
-    <ion-input [(ngModel)]="tareaEditando.lugarNacimiento"></ion-input>
+    <ion-input [(ngModel)]="autorEditando.lugarNacimiento"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>Fecha de Nacimiento</ion-label>
-    <ion-input [(ngModel)]="tareaEditando.fechaNacimiento"></ion-input>
+    <ion-input [(ngModel)]="autorEditando.fechaNacimiento"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label>Fecha de Defunción</ion-label>
-    <ion-input [(ngModel)]="tareaEditando.fechaDefunción"></ion-input>
+    <ion-label>Fecha de Defuncion</ion-label>
+    <ion-input [(ngModel)]="autorEditando.fechaDefuncion"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>Obras Notables</ion-label>
-    <ion-input [(ngModel)]="tareaEditando.obrasNotables"></ion-input>
+    <ion-input [(ngModel)]="autorEditando.obrasNotables"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label>Fotografía</ion-label>
-    <ion-input [(ngModel)]="tareaEditando.fotografía"></ion-input>
+    <ion-label>Fotografia</ion-label>
+    <ion-input [(ngModel)]="autorEditando.fotografia"></ion-input>
   </ion-item>
   <ion-button (click)="clicBotonInsertar()">Añadir autor</ion-button>
-  </div>
 </ion-content>
