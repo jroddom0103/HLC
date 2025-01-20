@@ -7,9 +7,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class FirestoreService {
 
-  constructor(private angularFirestore: AngularFirestore) {
-
-  }
+  constructor(private angularFirestore: AngularFirestore) {}
 
   public insertar(coleccion:any, datos:any) {
     return this.angularFirestore.collection(coleccion).add(datos);

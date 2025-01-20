@@ -8,6 +8,7 @@ import { Autor } from '../autor';
   styleUrls: ['home.page.scss'],
   standalone: false,
 })
+
 export class HomePage {
 
   autorEditando: Autor;

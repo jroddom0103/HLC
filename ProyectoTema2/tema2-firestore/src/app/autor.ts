@@ -3,7 +3,7 @@ export interface Autor {
     lugarNacimiento: string;
     fechaNacimiento: Date;
     fechaDefuncion: Date | null;
-    obrasNotables: string[];
+    obrasNotables: string;
     fotografia: string;
     
 }
