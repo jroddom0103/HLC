@@ -65,4 +65,13 @@ export class HomePage {
     })
   }
 
+  clicBotonModificar() {
+    this.firestoreService.actualizar("autores", this.idAutorSelec, this.autorEditando).then(() => {
+      // Actualizar la lista completa
+      this.obtenerListaAutores();
+      // Limpiar datos de pantalla
+      this.autorEditando = {} as Autor;
+    })
+  }
+
 }

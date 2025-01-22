@@ -38,7 +38,7 @@
 
 
   <ion-list>
-    <ion-item *ngFor="let documentAutor of arrayColeccionAutores" (click)="selecAutor(documentAutor)">
+    <ion-item *ngFor="let documentAutor of arrayColeccionAutores" (click)="selecAutor(documentAutor) ">
       <ion-grid>
         <ion-row>
           <h2>{{documentAutor.data.nombreCompleto}}</h2>
@@ -60,4 +60,5 @@
   </ion-list>
 
   <ion-button (click)="clicBotonBorrar()">Borrar autor</ion-button>
+  <ion-button (click)="clicBotonModificar()">Modificar tarea</ion-button>
 </ion-content>

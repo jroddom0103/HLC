@@ -21,4 +21,8 @@ export class FirestoreService {
     return this.angularFirestore.collection(coleccion).doc(documentId).delete();
   }
 
+  public actualizar(coleccion:any, documentId:any, datos:any) {
+    return this.angularFirestore.collection(coleccion).doc(documentId).set(datos);
+   }
+
 }
