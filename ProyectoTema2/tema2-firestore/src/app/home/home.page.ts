@@ -13,9 +13,15 @@ export class HomePage {
 
   autorEditando: Autor;
 
+  arrayColeccionAutores: any = [{
+    id: "",
+    data: {} as Autor
+  }];
+
   constructor(private firestoreService: FirestoreService) {
       // Crear un autor vacío
       this.autorEditando = {} as Autor;
+      this.obtenerListaAutores();
   }
 
   clicBotonInsertar() {
@@ -24,6 +30,18 @@ export class HomePage {
       this.autorEditando= {} as Autor;
     }, (error) => {
       console.error(error);
+    });
+  }
+
+  obtenerListaAutores(){
+    this.firestoreService.consultar("autores").subscribe((resultadoConsultaAutores) => {
+      this.arrayColeccionAutores = [];
+      resultadoConsultaAutores.forEach((datosAutor: any) => {
+        this.arrayColeccionAutores.push({
+          id: datosAutor.payload.doc.id,
+          data: datosAutor.payload.doc.data()
+        });
+      })
     });
   }
 

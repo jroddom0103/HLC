@@ -27,9 +27,35 @@
     <ion-label>Obras Notables</ion-label>
     <ion-input [(ngModel)]="autorEditando.obrasNotables"></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label>Fotografia</ion-label>
-    <ion-input [(ngModel)]="autorEditando.fotografia"></ion-input>
-  </ion-item>
   <ion-button (click)="clicBotonInsertar()">Añadir autor</ion-button>
+
+
+  <ion-item-divider></ion-item-divider>
+
+  <h1>LISTA DE AUTORES ESPAÑOLES</h1>
+
+  <ion-item-divider></ion-item-divider>
+
+  
+  <ion-list>
+    <ion-item *ngFor="let documentAutor of arrayColeccionAutores">
+      <ion-grid>
+        <ion-row>
+          <h2>{{documentAutor.data.nombreCompleto}}</h2>
+        </ion-row>
+        <ion-row>
+          <p>{{documentAutor.data.lugarNacimiento}}</p>
+        </ion-row>
+        <ion-row>
+          <p>{{documentAutor.data.fechaNacimiento}}</p>
+        </ion-row>
+        <ion-row>
+          <p>{{documentAutor.data.fechaDefuncion}}</p>
+        </ion-row>
+        <ion-row>
+          <p>{{documentAutor.data.obrasNotables}}</p>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
 </ion-content>
