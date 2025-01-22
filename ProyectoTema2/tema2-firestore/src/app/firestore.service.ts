@@ -17,4 +17,8 @@ export class FirestoreService {
     return this.angularFirestore.collection(coleccion).snapshotChanges();
   }
 
+  public borrar(coleccion:any, documentId:any) {
+    return this.angularFirestore.collection(coleccion).doc(documentId).delete();
+  }
+
 }

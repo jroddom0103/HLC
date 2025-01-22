@@ -18,6 +18,17 @@ export class HomePage {
     data: {} as Autor
   }];
 
+  idAutorSelec: string;
+
+  selecAutor(autorSelec) {
+    console.log("Autor seleccionado: ");
+    console.log(autorSelec);
+    this.idAutorSelec = autorSelec.id;
+    this.autorEditando.nombreCompleto = autorSelec.data.nombreCompleto;
+    this.autorEditando.lugarNacimiento = autorSelec.data.lugarNacimiento;
+    this.autorEditando.obrasNotables = autorSelec.data.obrasNotables;
+  }
+
   constructor(private firestoreService: FirestoreService) {
       // Crear un autor vacío
       this.autorEditando = {} as Autor;
@@ -43,6 +54,15 @@ export class HomePage {
         });
       })
     });
+  }
+
+  clicBotonBorrar() {
+    this.firestoreService.borrar("autores", this.idAutorSelec).then(() => {
+      // Actualizar la lista completa
+      this.obtenerListaAutores();
+      // Limpiar datos de pantalla
+      this.autorEditando = {} as Autor;
+    })
   }
 
 }
