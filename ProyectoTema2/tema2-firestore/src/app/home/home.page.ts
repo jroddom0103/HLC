@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FirestoreService } from '../firestore.service';
 import { Autor } from '../autor';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,12 @@ import { Autor } from '../autor';
 })
 
 export class HomePage {
+
+  constructor(private firestoreService: FirestoreService, private router: Router) {
+    // Crear un autor vacío
+    this.autorEditando = {} as Autor;
+    this.obtenerListaAutores();
+  }
 
   autorEditando: Autor;
 
@@ -27,24 +34,23 @@ export class HomePage {
     this.autorEditando.nombreCompleto = autorSelec.data.nombreCompleto;
     this.autorEditando.lugarNacimiento = autorSelec.data.lugarNacimiento;
     this.autorEditando.obrasNotables = autorSelec.data.obrasNotables;
+
+    this.router.navigate(['/detalle', this.idAutorSelec]);;
+
   }
 
-  constructor(private firestoreService: FirestoreService) {
-      // Crear un autor vacío
-      this.autorEditando = {} as Autor;
-      this.obtenerListaAutores();
-  }
+
 
   clicBotonInsertar() {
     this.firestoreService.insertar("autores", this.autorEditando).then(() => {
       console.log('Autor creado correctamente!');
-      this.autorEditando= {} as Autor;
+      this.autorEditando = {} as Autor;
     }, (error) => {
       console.error(error);
     });
   }
 
-  obtenerListaAutores(){
+  obtenerListaAutores() {
     this.firestoreService.consultar("autores").subscribe((resultadoConsultaAutores) => {
       this.arrayColeccionAutores = [];
       resultadoConsultaAutores.forEach((datosAutor: any) => {
