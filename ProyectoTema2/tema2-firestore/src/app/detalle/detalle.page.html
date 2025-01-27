@@ -14,6 +14,9 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item>
+        <img src={{document.data.imagenURL}} height="200px" width="200px">
+      </ion-item>
+      <ion-item>
         <ion-label position="stacked">Nombre Completo:</ion-label>
         <ion-input value="{{document.data.nombreCompleto}}"></ion-input>
       </ion-item>
@@ -35,7 +38,6 @@
       </ion-item>
     </ion-card-content>
   </ion-card>
-  <ion-button expand="full" color="primary">Añadir autor</ion-button>
   <ion-button expand="full" color="danger">Borrar autor</ion-button>
   <ion-button expand="full" color="secondary">Modificar tarea</ion-button>
 </ion-content>
